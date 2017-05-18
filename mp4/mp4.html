@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>啥子喃？丞相醒了？！</title>
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="loading.css" type="text/css">
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript">
+        var phoneWidth = parseInt(window.screen.width);
+        var phoneScale = phoneWidth / 640;
+        var ua = navigator.userAgent;
+        if(/Android (\d+\.\d+)/.test(ua)) {
+            var version = parseFloat(RegExp.$1);
+            if(version > 2.3) {
+                document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+            } else {
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+    </script>
+</head>
+<body>
+<!--<audio src="music.wav" id="music" style="visibility: hidden;"></audio>-->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="logos"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<div class="page" id="start" style="display: block">
+    <img src="bg1.jpg" style="width: 100%;height: 100%;position: absolute;top: 0;left:0;z-index: 101;" id="onoff">
+    <img src="p0_1.png" alt="" class="p0_1">
+</div>
+
+<div style="width: 100px;height: 100px;position: absolute;top: 0;left:0;background: #000;z-index: 10000" id="test"></div>
+<video id="myVideo" width="640" height="1040" preload="metadata" x5-video-player-type="h5" x-webkit-airplay="true" playsinline="true" webkit-playsinline="true" style="z-index: 100">
+    <source src="格式工厂酷MA萌.mp4" autoplay="autoplay" type="video/mp4">
+</video>
+<div class="page" id="page1" style="background: url('bg2.jpg');z-index: 99;display: none">
+    <div class="p1_1">
+        <img src="p1_1.png" alt="" style="display: block"/>
+        <img src="btn1.png" alt="" class="btn1">
+        <img src="btn2.png" alt="" class="btn2">
+        <div class="btn1"></div>
+        <div class="btn2"></div>
+    </div>
+    <span id="copy">全程策划创意技术：蓝光+伍拾广告+古怪科技</span>
+    <span id="visit_count" style="right: 5px;color: #FFFFFF;font-size: 10px;"></span>
+</div>
+
+
+<script src="jquery-2.1.4.min.js"></script>
+<script src="index.js"></script>
+<script type="text/javascript" src="jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="share.js"></script>
+<script type="text/javascript">
+    $(function() {
+        //微信分享
+        $.weixinShare({
+            debug: false,
+            title: "啥子喃？丞相醒了？！",
+            desc: "沉睡1700余年的丞相，竟然在成都“复活”了！",
+            link: "http://wechat.guguan.net/ChengDu/LanGuang/201704283/",
+            imgUrl: "http://wechat.guguan.net/ChengDu/LanGuang/201704283/img/share.jpg"
+        });
+    });
+</script>
+</body>
+</html>
