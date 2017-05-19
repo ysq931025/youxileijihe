@@ -18,7 +18,7 @@ $(function () {
 
     $("#myVideo").bind("ended",function () {
         $("#myVideo").css({display:"none"});
-        $("#page1").css({display:"block"});
+        // $("#page1").css({display:"block"});
     });
     function canplay(){
         myVideo.pause();
@@ -37,18 +37,18 @@ $(function () {
             audio.play();
         }, false);
     }
-    $(".p0_1").on("click", function () {
-        // audioAutoPlay("music");
-        $("#start").css({display:"none"});
-        myVideo.play();
-    });
+    // $(".p0_1").on("click", function () {
+    //     // audioAutoPlay("music");
+    //     $("#start").css({display:"none"});
+    //     myVideo.play();
+    // });
 
-    $(".btn1").on("touchend", function () {
-        window.location.href = "more.html"
-    });
-    $(".btn2").on("touchend", function () {
-        window.location.href = "http://shop.brc.com.cn"
-    });
+    // $(".btn1").on("touchend", function () {
+    //     window.location.href = "more.html"
+    // });
+    // $(".btn2").on("touchend", function () {
+    //     window.location.href = "http://shop.brc.com.cn"
+    // });
     /*拖拽*/
     // var startX,startY,moveEndX,moveEndY,X,Y;
     //
